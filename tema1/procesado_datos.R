@@ -4,10 +4,10 @@
 
 ## Nos hace un listado de archivos
 ## Especificamos full.names=T para que nos de la ruta
-directorio <- "./tema1/datos/"
-Sarchivo <- list.files(directorio, full.names = T)
+directorio <- "./tema1//datos/"
+archivo <- list.files(directorio, full.names = T)
 ## leemos las lineas del archivo
-predata <- readLines(datos)
+predata <- readLines(archivo)
 ## obtenemos un objeto de la clase character
 ## obtenemos los datos y los convertimos a una matriz
 ## el signo negativo nos dice que no tome esos indices
@@ -84,17 +84,28 @@ for (i in 1:nrow(combinaciones)) {
 library(data.table)
 library(dplyr)
 datos.dt<- as.data.table(datos)
-datos.dt %>% group_by(Gender, SMOKE) %>% summarise(n=n())
-csa <- datos %>% group_by(Gender, NObeyesdad) %>% group_by(n=n())
+datos.dt %>% group_by(Gender,SMOKE) %>% summarise(n=n())
+csa <- datos %>% group_by(Gender,NObeyesdad) %>% group_by(n=n())
 datos$obesidadsino <- (as.factor(grepl("obesity",ignore.case = T,datos$NObeyesdad)))
-datos$obesidadsino
 
-datos$CH20 <- as.numeric(datos$CH20)
+datos$CH2O <- as.numeric(datos$CH2O)
 
 ### Haced una tabla con la n de cada subgrupo formado
 ### y el p valor asociado y los valores esperados medios
 
-### ¿Qué genero está mas asociado con la obesidad?
+### ¿La obesidad está asociada al género0?
+
+obesidad <- datos$NObeyesdad
+genero <- datos$Gender
+
+##table<-as.data.table(obesidad,genero)
+##table(obesidad,genero)
+table<-as.data.frame(obesidad,genero)
+
+### esta asociada al genero?
+
+chisq.test(tabla)
+
 ### dicho genero, su familia esta asociada con obesidad?
 ### ¿Cuales comen calorico pero no tienen obesidad? ¿
 ### De los que fuman, y no tienen obesidad, tienen actividad fisica
