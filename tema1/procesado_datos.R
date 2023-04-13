@@ -97,17 +97,25 @@ datos$CH2O <- as.numeric(datos$CH2O)
 
 obesidad <- datos$NObeyesdad
 genero <- datos$Gender
-
-##table<-as.data.table(obesidad,genero)
-##table(obesidad,genero)
+table(obesidad,genero)
+table<-as.data.table(obesidad,genero)
+table
 table<-as.data.frame(obesidad,genero)
 
 ### esta asociada al genero?
 
-chisq.test(tabla)
+chisq.test(table)
+
+normal.infra<-datos(grep("wieght",ignore.case=T,datos$NObeyesdad),)
 
 ### dicho genero, su familia esta asociada con obesidad?
-### ¿Cuales comen calorico pero no tienen obesidad? ¿
+
+normal.infra$NObeyesdad<-as.factor(as.character(normal.infra$NObeyesdad))
+table(normal.infra$Gender,normal.infra$CAEC)
+
+datos %>% group_by(CAEC,Gender) %>% sumarise(n=n())
+
+### ¿Cuales comen calorico pero no tienen obesidad? 
 ### De los que fuman, y no tienen obesidad, tienen actividad fisica
 ### en este paso habra preguntas, pregunten !
 ### beben alcohol y caminan ?
@@ -120,7 +128,8 @@ chisq.test(tabla)
 ### y las categoricas cuando hay solo dos niveles
 ###   que sucede cuando hay más de un nivel ?
 
+altura<-datos$Heigth 
 
-
+split(altura,genero)
 
 

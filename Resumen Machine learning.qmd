@@ -1,0 +1,46 @@
+---
+title: "unidad_1_Nimrod Sarmiento_Juan Patricio Ramirez"
+format: html
+editor: visual
+param:
+ data: './tema1/datos'
+---
+
+# Machine Learning
+
+# Unidad 1
+
+## Orígenes del Machine Learning
+
+## Usos y abusos de Machine Learning
+
+## ¿Cómo aprende Machine Learning?
+
+## Pasos para aplicar el aprendisaje
+
+## Evaluar el éxito del aprendisaje
+
+## Elegir un Algoritmo para Machine Learning
+
+## Usar R para Machine Learning
+
+## Instalar y carga de paquetes R
+
+# Unidad 2
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
