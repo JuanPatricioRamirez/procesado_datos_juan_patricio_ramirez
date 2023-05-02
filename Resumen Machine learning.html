@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nimrod Sarmiento y Juan Patricio Ramirez">
 
-<title>unidad_1_Nimrod Sarmiento_Juan Patricio Ramirez</title>
+<title>Resumen Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,69 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -100,21 +38,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link active" data-scroll-target="#machine-learning">Machine Learning</a></li>
+  <li><a href="#unidad-1" id="toc-unidad-1" class="nav-link" data-scroll-target="#unidad-1">Unidad 1</a>
+  <ul>
+  <li><a href="#orígenes-del-machine-learning" id="toc-orígenes-del-machine-learning" class="nav-link" data-scroll-target="#orígenes-del-machine-learning">Orígenes del Machine Learning</a></li>
+  <li><a href="#usos-y-abusos-de-machine-learning" id="toc-usos-y-abusos-de-machine-learning" class="nav-link" data-scroll-target="#usos-y-abusos-de-machine-learning">Usos y abusos de Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#consideraciones-éticas" id="toc-consideraciones-éticas" class="nav-link" data-scroll-target="#consideraciones-éticas">Consideraciones Éticas</a></li>
+  </ul></li>
+  <li><a href="#cómo-aprende-machine-learning" id="toc-cómo-aprende-machine-learning" class="nav-link" data-scroll-target="#cómo-aprende-machine-learning">¿Cómo aprende Machine Learning?</a>
+  <ul class="collapse">
+  <li><a href="#abstracción-y-representación-del-conocimiento" id="toc-abstracción-y-representación-del-conocimiento" class="nav-link" data-scroll-target="#abstracción-y-representación-del-conocimiento">Abstracción y representación del conocimiento</a></li>
+  <li><a href="#generalización" id="toc-generalización" class="nav-link" data-scroll-target="#generalización">Generalización</a></li>
+  <li><a href="#evaluar-el-exito-del-aprendisaje" id="toc-evaluar-el-exito-del-aprendisaje" class="nav-link" data-scroll-target="#evaluar-el-exito-del-aprendisaje">Evaluar el exito del aprendisaje</a></li>
+  </ul></li>
+  <li><a href="#pasos-para-aplicar-el-aprendisaje" id="toc-pasos-para-aplicar-el-aprendisaje" class="nav-link" data-scroll-target="#pasos-para-aplicar-el-aprendisaje">Pasos para aplicar el aprendisaje</a></li>
+  <li><a href="#elegir-un-algoritmo-para-machine-learning" id="toc-elegir-un-algoritmo-para-machine-learning" class="nav-link" data-scroll-target="#elegir-un-algoritmo-para-machine-learning">Elegir un Algoritmo para Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#pensando-en-los-datos-de-entrada" id="toc-pensando-en-los-datos-de-entrada" class="nav-link" data-scroll-target="#pensando-en-los-datos-de-entrada">Pensando en los datos de entrada</a></li>
+  <li><a href="#pensando-en-los-tipos-de-aprendizaje-automático-algoritmos" id="toc-pensando-en-los-tipos-de-aprendizaje-automático-algoritmos" class="nav-link" data-scroll-target="#pensando-en-los-tipos-de-aprendizaje-automático-algoritmos">Pensando en los tipos de aprendizaje automático algoritmos</a></li>
+  <li><a href="#hacer-coincidir-sus-datos-con-un-algoritmo-apropiado" id="toc-hacer-coincidir-sus-datos-con-un-algoritmo-apropiado" class="nav-link" data-scroll-target="#hacer-coincidir-sus-datos-con-un-algoritmo-apropiado">Hacer coincidir sus datos con un algoritmo apropiado</a></li>
+  </ul></li>
+  <li><a href="#usar-r-para-machine-learning" id="toc-usar-r-para-machine-learning" class="nav-link" data-scroll-target="#usar-r-para-machine-learning">Usar R para Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#instalar-y-carga-de-paquetes-r" id="toc-instalar-y-carga-de-paquetes-r" class="nav-link" data-scroll-target="#instalar-y-carga-de-paquetes-r">Instalar y carga de paquetes R</a></li>
+  <li><a href="#instalación-de-un-paquete-r" id="toc-instalación-de-un-paquete-r" class="nav-link" data-scroll-target="#instalación-de-un-paquete-r">Instalación de un paquete R</a></li>
+  <li><a href="#instalación-de-un-paquete-mediante-la-interfaz-de-apuntar-y-hacer-clic" id="toc-instalación-de-un-paquete-mediante-la-interfaz-de-apuntar-y-hacer-clic" class="nav-link" data-scroll-target="#instalación-de-un-paquete-mediante-la-interfaz-de-apuntar-y-hacer-clic">Instalación de un paquete mediante la interfaz de apuntar y hacer clic</a></li>
+  <li><a href="#cargando-un-paquete-r" id="toc-cargando-un-paquete-r" class="nav-link" data-scroll-target="#cargando-un-paquete-r">Cargando un paquete R</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#unidad-2" id="toc-unidad-2" class="nav-link" data-scroll-target="#unidad-2">Unidad 2</a>
+  <ul>
+  <li><a href="#gestión-y-comprensión-de-datos" id="toc-gestión-y-comprensión-de-datos" class="nav-link" data-scroll-target="#gestión-y-comprensión-de-datos">Gestión y comprensión de datos</a>
+  <ul class="collapse">
+  <li><a href="#explorando-la-estructura-de-los-datos" id="toc-explorando-la-estructura-de-los-datos" class="nav-link" data-scroll-target="#explorando-la-estructura-de-los-datos">Explorando la estructura de los datos</a></li>
+  <li><a href="#explorando-variables-numéricas" id="toc-explorando-variables-numéricas" class="nav-link" data-scroll-target="#explorando-variables-numéricas">Explorando variables numéricas</a></li>
+  <li><a href="#medición-de-la-tendencia-central-media-y-mediana" id="toc-medición-de-la-tendencia-central-media-y-mediana" class="nav-link" data-scroll-target="#medición-de-la-tendencia-central-media-y-mediana">Medición de la tendencia central: media y mediana</a></li>
+  <li><a href="#visualización-de-variables-numéricas-diagramas-de-caja" id="toc-visualización-de-variables-numéricas-diagramas-de-caja" class="nav-link" data-scroll-target="#visualización-de-variables-numéricas-diagramas-de-caja">Visualización de variables numéricas: diagramas de caja</a></li>
+  <li><a href="#visualización-de-variables-numéricas-histogramas" id="toc-visualización-de-variables-numéricas-histogramas" class="nav-link" data-scroll-target="#visualización-de-variables-numéricas-histogramas">Visualización de variables numéricas – histogramas</a></li>
+  <li><a href="#medición-de-la-dispersión-varianza-y-desviación-estándar" id="toc-medición-de-la-dispersión-varianza-y-desviación-estándar" class="nav-link" data-scroll-target="#medición-de-la-dispersión-varianza-y-desviación-estándar">Medición de la dispersión: varianza y desviación estándar</a></li>
+  <li><a href="#explorando-variables-categóricas" id="toc-explorando-variables-categóricas" class="nav-link" data-scroll-target="#explorando-variables-categóricas">Explorando variables categóricas</a></li>
+  <li><a href="#visualización-de-relaciones-diagramas-de-dispersión" id="toc-visualización-de-relaciones-diagramas-de-dispersión" class="nav-link" data-scroll-target="#visualización-de-relaciones-diagramas-de-dispersión">Visualización de relaciones: diagramas de dispersión</a></li>
+  <li><a href="#examen-de-las-relaciones-tabulaciones-cruzadas-de-dos-factores" id="toc-examen-de-las-relaciones-tabulaciones-cruzadas-de-dos-factores" class="nav-link" data-scroll-target="#examen-de-las-relaciones-tabulaciones-cruzadas-de-dos-factores">Examen de las relaciones: tabulaciones cruzadas de dos factores</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">unidad_1_Nimrod Sarmiento_Juan Patricio Ramirez</h1>
+<h1 class="title">Resumen Machine Learning</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nimrod Sarmiento y Juan Patricio Ramirez </p>
+          </div>
+  </div>
     
   
     
@@ -130,47 +125,312 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Unidad 1</h1>
 <section id="orígenes-del-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="orígenes-del-machine-learning">Orígenes del Machine Learning</h2>
+<p>Este campo se originó en un entorno donde los datos disponibles, los métodos estadísticos y el poder de cómputo evolucionaron rápida y simultáneamente</p>
+<p>El crecimiento de los datos requería potencia informática adicional, lo que a su vez estimuló el desarrollo de estadísticas métodos para analizar grandes conjuntos de datos. Esto creó un ciclo de avance que permitió recopilar datos aún más grandes e interesantes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Ciclo.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </section>
 <section id="usos-y-abusos-de-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="usos-y-abusos-de-machine-learning">Usos y abusos de Machine Learning</h2>
+<p>En esencia, el Machine Learning está principalmente interesado en dar sentido a los datos complejos:</p>
+<p>• Predecir los resultados de las elecciones</p>
+<p>• Identifique y filtre los mensajes de spam del correo electrónico</p>
+<p>• Prever actividad delictiva</p>
+<p>• Automatice las señales de tráfico de acuerdo con las condiciones de la carretera</p>
+<p>• Producir estimaciones financieras de tormentas y desastres naturales</p>
+<p>• Examinar la rotación de clientes</p>
+<p>• Crea aviones de pilotaje automático y coches de conducción automática.</p>
+<p>• Identificar personas con capacidad para donar</p>
+<p>• Dirigir la publicidad a tipos específicos de consumidores</p>
+<p>Un algoritmo de aprendizaje automático toma datos e identifica patrones que pueden ser utilizado para la acción</p>
+<section id="consideraciones-éticas" class="level3">
+<h3 class="anchored" data-anchor-id="consideraciones-éticas">Consideraciones Éticas</h3>
+<p>Se debe tener precaución al obtener o analizar datos para evitar infringir leyes, violar términos de servicio o acuerdos de uso de datos, abusar de la confianza o violar la privacidad de los clientes o del público.</p>
+<p>Ciertas jurisdicciones pueden impedirle usar datos raciales, étnicos, religiosos u otras clases protegidas por motivos comerciales, pero tenga en cuenta que excluir estos datos de su análisis puede no ser suficiente: los algoritmos de aprendizaje automático pueden aprender esta información de forma independiente sin darse cuenta.</p>
+<p>Aparte de las consecuencias legales, el uso inapropiado de los datos puede perjudicar sus resultados. Los clientes pueden sentirse incómodos o asustados si se hacen públicos aspectos de sus vidas que consideran privados.</p>
+<p>Sería prudente considerar las implicaciones culturales de su trabajo antes de comenzar con su proyecto</p>
+</section>
 </section>
 <section id="cómo-aprende-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-aprende-machine-learning">¿Cómo aprende Machine Learning?</h2>
+<p>Independientemente de si el alumno es un humano o una máquina, el proceso básico de aprendizaje es similar. Se puede dividir en tres componentes de la siguiente manera:</p>
+<p>• Entrada de datos: utiliza la observación, el almacenamiento de memoria y la recuperación para proporcionar una</p>
+<p>base fáctica para un mayor razonamiento.</p>
+<p>• Abstracción: Implica la traducción de datos en representaciones más amplias.</p>
+<p>• Generalización: utiliza datos abstractos para formar una base para la acción.</p>
+<p>Las estrategias de aprendizaje comúnmente utilizadas para crear un esquema o un mapa conceptual son similares a cómo una máquina realiza la abstracción del conocimiento.</p>
+<section id="abstracción-y-representación-del-conocimiento" class="level3">
+<h3 class="anchored" data-anchor-id="abstracción-y-representación-del-conocimiento">Abstracción y representación del conocimiento</h3>
+<p>Durante el proceso de representación del conocimiento, la computadora resume las entradas sin procesar en un modelo, una descripción explícita de los patrones estructurados entre los datos.</p>
+<p>Hay muchos tipos diferentes de modelos. Es posible que ya estés familiarizado con algunos.</p>
+<p>Ejemplos incluyen:</p>
+<p>• Ecuaciones</p>
+<p>• Diagramas como árboles y gráficos</p>
+<p>• Reglas lógicas if/else</p>
+<p>• Agrupaciones de datos conocidas como clústeres</p>
+<p>La elección del modelo normalmente no se deja en manos de la máquina. En cambio, el modelo está dictado por la tarea de aprendizaje y el tipo de datos que se analizan</p>
+<p>El proceso de ajustar un modelo particular a un conjunto de datos se conoce como entrenamiento</p>
+<p>El entrenamiento connota mejor el hecho de que el maestro humano impone el modelo de aprendizaje automático al estudiante máquina, proporcionando a la computadora una estructura que intenta modelar.</p>
+<p>Cuando el modelo ha sido entrenado, los datos se han transformado en una forma abstracta que resume la información original. Es importante tener en cuenta que el modelo en sí mismo no proporciona datos adicionales, aunque a veces es interesante por sí solo.</p>
+<p>¿Cómo puede ser esto? La razón es que al imponer una estructura asumida sobre los datos subyacentes, da una idea de lo que no se ve y proporciona una teoría sobre cómo los datos están relacionados.</p>
+</section>
+<section id="generalización" class="level3">
+<h3 class="anchored" data-anchor-id="generalización">Generalización</h3>
+<p>El término generalización describe el proceso de convertir el conocimiento abstracto en una forma que pueda utilizarse para la acción.</p>
+<p>Los algoritmos de aprendizaje automático generalmente emplean atajos que dividen más rápidamente el conjunto de conceptos. Con este fin, el algoritmo empleará heurísticas o conjeturas fundamentadas sobre dónde encontrar los conceptos más importantes.</p>
+</section>
+<section id="evaluar-el-exito-del-aprendisaje" class="level3">
+<h3 class="anchored" data-anchor-id="evaluar-el-exito-del-aprendisaje">Evaluar el exito del aprendisaje</h3>
+<p>El paso final en el proceso de generalización es determinar el éxito del modelo.</p>
+<p>Una vez que un modelo ha sido entrenado en un conjunto de datos inicial, el modelo se prueba en un nuevo conjunto de datos y se juzga en qué medida su caracterización de los datos de entrenamiento se generaliza a los nuevos datos. Vale la pena señalar que es extremadamente raro que un modelo generalice perfectamente todos los casos imprevistos.</p>
+<p>Los datos ruidosos son causados por eventos aparentemente aleatorios, como:</p>
+<p>• Error de medición debido a sensores imprecisos que a veces suman o restan</p>
+<p>un poco de la lectura</p>
+<p>• Problemas con el informe de datos, como que los encuestados informen respuestas aleatorias a</p>
+<p>preguntas de la encuesta para terminar más rápido</p>
+<p>• Errores causados cuando los datos se registran incorrectamente, incluidos valores faltantes, nulos, truncados, codificados incorrectamente o dañado</p>
+<p>Tratar de modelar el ruido en los datos es la base de un problema llamado sobreajuste.</p>
+<p>e dice que un modelo que parece funcionar bien durante el entrenamiento pero lo hace mal durante las pruebas está sobreajustado al conjunto de datos de entrenamiento, ya que no se generaliza bien.</p>
+<p>Las soluciones al problema del sobreajuste son específicas para enfoques particulares de aprendizaje automático.</p>
+</section>
 </section>
 <section id="pasos-para-aplicar-el-aprendisaje" class="level2">
 <h2 class="anchored" data-anchor-id="pasos-para-aplicar-el-aprendisaje">Pasos para aplicar el aprendisaje</h2>
-</section>
-<section id="evaluar-el-éxito-del-aprendisaje" class="level2">
-<h2 class="anchored" data-anchor-id="evaluar-el-éxito-del-aprendisaje">Evaluar el éxito del aprendisaje</h2>
+<p>1. Recopilación de datos: ya sea que los datos estén escritos en papel, registrados en archivos de texto y hojas de cálculo, o almacenados en una base de datos SQL, deberá recopilarlos en un formato electrónico adecuado para el análisis. Estos datos servirán como material de aprendizaje que utiliza un algoritmo para generar conocimiento procesable.</p>
+<p>2. Explorar y preparar los datos: la calidad de cualquier proyecto de aprendizaje automático se basa en gran medida en la calidad de los datos que utiliza. Este paso en el proceso de aprendizaje automático tiende a requerir una gran cantidad de intervención humana. Una estadística citada a menudo sugiere que el 80 por ciento del esfuerzo en el aprendizaje automático se dedica a los datos. Gran parte de este tiempo se dedica a aprender más sobre los datos y sus matices durante una práctica llamada exploración de datos.</p>
+<p>3. Entrenar un modelo con los datos: para cuando los datos se hayan preparado para el análisis, es probable que tenga una idea de lo que espera aprender de los datos. La tarea específica de aprendizaje automático informará la selección de un algoritmo apropiado, y el algoritmo representará los datos en forma de modelo.</p>
+<p>4. Evaluación del rendimiento del modelo: debido a que cada modelo de aprendizaje automático da como resultado una solución sesgada del problema de aprendizaje, es importante evaluar qué tan bien aprendió el algoritmo a partir de su experiencia. Según el tipo de modelo utilizado, es posible que pueda evaluar la precisión del modelo mediante un conjunto de datos de prueba o que necesite desarrollar medidas de rendimiento específicas para la aplicación prevista.</p>
+<p>5. Mejora del rendimiento del modelo: si se necesita un mejor rendimiento, se hace necesario utilizar estrategias más avanzadas para aumentar el rendimiento del modelo. A veces, puede ser necesario cambiar a un tipo de modelo completamente diferente. Es posible que deba complementar sus datos con datos adicionales o realizar un trabajo preparatorio adicional como en el paso dos de este proceso.</p>
 </section>
 <section id="elegir-un-algoritmo-para-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="elegir-un-algoritmo-para-machine-learning">Elegir un Algoritmo para Machine Learning</h2>
+<p>El proceso de elegir un algoritmo implica hacer coincidir las características de los datos que se van a aprender con los sesgos de los enfoques disponibles</p>
+<p>Dado que la elección de un algoritmo de aprendizaje automático depende en gran medida del tipo de datos que está analizando y de la tarea propuesta, a menudo es útil pensar en este proceso mientras recopila, explora y limpia sus datos.</p>
+<section id="pensando-en-los-datos-de-entrada" class="level3">
+<h3 class="anchored" data-anchor-id="pensando-en-los-datos-de-entrada">Pensando en los datos de entrada</h3>
+<p>Todos los algoritmos de aprendizaje automático requieren datos de entrenamiento de entrada. El formato exacto puede diferir, pero en su forma más básica, los datos de entrada toman la forma de ejemplos y características.</p>
+<p>Las características vienen en varias formas también. Si una característica representa una característica medida en números, como era de esperar, se llama numérica. Alternativamente, si mide un atributo que está representado por un conjunto de categorías, la característica se denomina categórica o nominal. Un caso especial de variables categóricas se llama ordinal, que designa una variable nominal con categorías que caen en una lista ordenada.</p>
+</section>
+<section id="pensando-en-los-tipos-de-aprendizaje-automático-algoritmos" class="level3">
+<h3 class="anchored" data-anchor-id="pensando-en-los-tipos-de-aprendizaje-automático-algoritmos">Pensando en los tipos de aprendizaje automático algoritmos</h3>
+<p>Los algoritmos de aprendizaje automático se pueden dividir en dos grupos principales: estudiantes supervisados que se usan para construir modelos predictivos y estudiantes no supervisados que se usan para construir modelos descriptivos.</p>
+<p>El algoritmo de aprendizaje intenta descubrir y modelar la relación entre la característica objetivo (la característica que se predice) y las otras características.</p>
+<p>Debido a que los modelos predictivos reciben instrucciones claras sobre lo que necesitan aprender y cómo deben aprenderlo, el proceso de entrenamiento de un modelo predictivo se conoce como aprendizaje supervisado. La supervisión no se refiere a la participación humana, sino al hecho de que los valores objetivo brindan un rol de supervisión, lo que indica la tarea que necesita aprender.</p>
+<p>La característica objetivo que se va a predecir es una característica categórica conocida como clase y se divide en categorías denominadas niveles. Una clase puede tener dos o más niveles, y los niveles no tienen por qué ser necesariamente ordinales. Debido a que la clasificación se usa tanto en el aprendizaje automático, existen muchos tipos de algoritmos de clasificación.</p>
+<p>Los alumnos supervisados también se pueden usar para predecir datos numéricos como ingresos, valores de laboratorio, puntajes de pruebas o conteos de artículos. Para predecir tales valores numéricos, una forma común de predicción numérica ajusta los modelos de regresión lineal a los datos de entrada.</p>
+<p>Aunque los modelos de regresión no son el único tipo de modelo numérico, son, con diferencia, los más utilizados.</p>
+<p>Se utiliza un modelo descriptivo para tareas que se beneficiarían de la información obtenida al resumir datos de formas nuevas e interesantes. A diferencia de los modelos predictivos que predicen un objetivo de interés; en un modelo descriptivo, ninguna característica es más importante que otra.</p>
+<p>La tarea de modelado descriptivo de dividir un conjunto de datos en grupos homogéneos se denomina agrupación. Esto a veces se usa para el análisis de segmentación que identifica grupos de personas con información similar de compras, donaciones o demográfica para que las campañas publicitarias se puedan adaptar a audiencias particulares.</p>
+</section>
+<section id="hacer-coincidir-sus-datos-con-un-algoritmo-apropiado" class="level3">
+<h3 class="anchored" data-anchor-id="hacer-coincidir-sus-datos-con-un-algoritmo-apropiado">Hacer coincidir sus datos con un algoritmo apropiado</h3>
+<p>La siguiente tabla enumera los tipos generales de algoritmos de aprendizaje automático que se tratan en este libro, cada uno de los cuales puede implementarse de varias maneras. Aunque esto cubre solo una parte del conjunto completo de todos los algoritmos de aprendizaje automático, el aprendizaje de estos métodos proporcionará una base suficiente para dar sentido a otros métodos a medida que los encuentre.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Tabla%20de%20algoritmos.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Para hacer coincidir una tarea de aprendizaje con un enfoque de aprendizaje automático, deberá comenzar con uno de los cuatro tipos de tareas: clasificación, predicción numérica, detección de patrones o agrupación.</p>
+</section>
 </section>
 <section id="usar-r-para-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="usar-r-para-machine-learning">Usar R para Machine Learning</h2>
+<p>A pesar del amplio conjunto de complementos de R disponibles, el formato del paquete hace que la instalación y el uso sean un proceso prácticamente sin esfuerzo. Para demostrar el uso de paquetes, instalaremos y cargaremos el paquete RWeka, que fue desarrollado por Kurt Hornik, Christian Buchta y Achim Zeileis (consulte Aprendizaje automático de código abierto: R conoce a Weka</p>
+<p>en Computational Statistics 24: 225-232 para obtener más información). El paquete RWeka proporciona una colección de funciones que dan acceso a R a los algoritmos de aprendizaje automático en el paquete de software Weka basado en Java de Ian H. Witten y Eibe Frank.</p>
+<p>Para obtener más información sobre Weka, consulte:</p>
+<p>http://www.cs.waikato.ac.nz/~ml/weka/.</p>
+<section id="instalar-y-carga-de-paquetes-r" class="level3">
+<h3 class="anchored" data-anchor-id="instalar-y-carga-de-paquetes-r">Instalar y carga de paquetes R</h3>
+<p>A pesar del amplio conjunto de complementos de R disponibles, el formato del paquete hace que la instalación y el uso sean un proceso prácticamente sin esfuerzo. Para demostrar el uso de paquetes, instalaremos y cargaremos el paquete RWeka, que fue desarrollado por Kurt Hornik, Christian Buchta y Achim Zeileis (consulte Aprendizaje automático de código abierto: R conoce a Weka en Computational Statistics 24: 225-232 para obtener más información). El paquete RWeka proporciona una colección de funciones que dan acceso a R a los algoritmos de aprendizaje automático en el paquete de software Weka basado en Java de Ian H. Witten y Eibe Frank.</p>
+<p>Para obtener más información sobre Weka, consulte:</p>
+<p>http://www.cs.waikato.ac.nz/~ml/weka/.</p>
 </section>
-<section id="instalar-y-carga-de-paquetes-r" class="level2">
-<h2 class="anchored" data-anchor-id="instalar-y-carga-de-paquetes-r">Instalar y carga de paquetes R</h2>
+<section id="instalación-de-un-paquete-r" class="level3">
+<h3 class="anchored" data-anchor-id="instalación-de-un-paquete-r">Instalación de un paquete R</h3>
+<p>La forma más directa de instalar un paquete es a través de la función install.packages().</p>
+<p>Para instalar el paquete RWeka, en el símbolo del sistema R simplemente escriba:</p>
+<p>&gt; install.packages(“RWeka”)</p>
+<p>R luego se conectará a CRAN y descargará el paquete en el formato correcto para tu sistema operativo Algunos paquetes como RWeka requieren paquetes adicionales para instalarse antes de que se puedan utilizar (se denominan dependencias). Por defecto, el instalador descargará e instalará automáticamente cualquier dependencia.</p>
+<p>Las opciones de instalación predeterminadas son apropiadas para la mayoría de los sistemas. Sin embargo, en algunos casos, es posible que desee instalar un paquete en otra ubicación. Por ejemplo, si no tiene privilegios de raíz o administrador en su sistema, es posible que deba especificar una ruta de instalación alternativa. Esto se puede lograr usando la opción lib, de la siguiente manera:</p>
+<p>&gt; install.packages(“RWeka”, lib=“/path/to/library”)</p>
+<p>La función de instalación también proporciona opciones adicionales para instalar desde un archivo local, instalar desde la fuente o usar versiones experimentales. Puede leer acerca de estas opciones en el archivo de ayuda usando el siguiente comando:</p>
+<p>&gt; ?install.packages</p>
+</section>
+<section id="instalación-de-un-paquete-mediante-la-interfaz-de-apuntar-y-hacer-clic" class="level3">
+<h3 class="anchored" data-anchor-id="instalación-de-un-paquete-mediante-la-interfaz-de-apuntar-y-hacer-clic">Instalación de un paquete mediante la interfaz de apuntar y hacer clic</h3>
+<p>Como alternativa a escribir el comando install.packages(), R proporciona una interfaz gráfica de usuario (GUI) para la instalación de paquetes. En un sistema Microsoft Windows, se puede acceder a esto desde el elemento de comando Instalar paquete(s) en el menú Paquetes, como se muestra en la siguiente captura de pantalla. En Mac OS X, el comando tiene la etiqueta Instalador de paquetes y se encuentra en el menú Paquetes y datos.</p>
+<p>En Windows, después de iniciar el instalador del paquete (y elegir una ubicación espejo CRAN si aún no lo ha hecho), aparecerá una gran lista de paquetes. Simplemente desplácese hasta el paquete RWeka y haga clic en el botón Aceptar para instalar el paquete y todas las dependencias en la ubicación predeterminada.</p>
+<p>En Mac OS X, el menú del instalador del paquete ofrece opciones adicionales. Para cargar la lista de paquetes, haga clic en el botón Obtener lista. Desplácese hasta el paquete RWeka (o utilice la función de búsqueda de paquetes) y haga clic en Instalar seleccionado. Tenga en cuenta que, de forma predeterminada, el instalador de paquetes de Mac OS X no instala dependencias a menos que se seleccione la casilla de verificación Instalar dependencias.</p>
+</section>
+<section id="cargando-un-paquete-r" class="level3">
+<h3 class="anchored" data-anchor-id="cargando-un-paquete-r">Cargando un paquete R</h3>
+<p>Para conservar la memoria, R no carga todos los paquetes instalados de forma predeterminada. En su lugar, los usuarios cargan los paquetes a medida que los necesitan mediante library() function.</p>
+<p>Para cargar el paquete RWeka que instalamos anteriormente, debe escribir lo siguiente:</p>
+<p>&gt; library(RWeka)</p>
+<p>Aparte de RWeka, hay varios otros paquetes de R que se utilizarán en capítulos posteriores. Se proporcionarán instrucciones de instalación a medida que se utilicen paquetes adicionales.</p>
+</section>
 </section>
 </section>
 <section id="unidad-2" class="level1">
 <h1>Unidad 2</h1>
-<section id="running-code" class="level2">
-<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="gestión-y-comprensión-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="gestión-y-comprensión-de-datos">Gestión y comprensión de datos</h2>
+<section id="explorando-la-estructura-de-los-datos" class="level3">
+<h3 class="anchored" data-anchor-id="explorando-la-estructura-de-los-datos">Explorando la estructura de los datos</h3>
+<p>La función str() proporciona un método para mostrar la estructura de un marco de datos o cualquier estructura de datos R, incluidos vectores y listas. Se puede utilizar para crear el esquema básico de nuestro diccionario de datos:</p>
+<p>&gt; str(usedcars)</p>
+<p>‘data.frame’: 150 obs. of 6 variables:</p>
+<p>$ year : int 2011 2011 2011 2011 …</p>
+<p>$ model : chr “SEL” “SEL” “SEL” “SEL” …</p>
+<p>$ price : int 21992 20995 19995 17809 …</p>
+<p>$ mileage : int 7413 10926 7351 11613 …</p>
+<p>$ color : chr “Yellow” “Gray” “Silver” “Gray” …</p>
+<p>$ transmission: chr “AUTO” “AUTO” “AUTO” “AUTO” …</p>
+<p>The 6 variables statement refers to the six features that were recorded in the data.</p>
+<p>These features are listed by name on separate lines. Looking at the line for the feature called color, we note some additional details:</p>
+<p>$ color : chr “Yellow” “Gray” “Silver” “Gray” …</p>
+</section>
+<section id="explorando-variables-numéricas" class="level3">
+<h3 class="anchored" data-anchor-id="explorando-variables-numéricas">Explorando variables numéricas</h3>
+<p>Para investigar las variables numéricas en los datos de automóviles usados, emplearemos un conjunto de medidas de uso común para describir valores conocidos como estadísticas de resumen. La función summary() muestra varias estadísticas de resumen comunes.</p>
+<p>Echemos un vistazo a una sola característica, año:</p>
+<p>&gt; summary(usedcars$year)</p>
+<p>Min. 1st Qu. Median Mean 3rd Qu. Max.</p>
+<p>2000 2008 2009 2009 2010 2012</p>
+<p>También podemos usar la función summary() para obtener estadísticas de resumen para varias variables numéricas al mismo tiempo:</p>
+<p>&gt; summary(usedcars[c(“price”, “mileage”)])</p>
+<p>price mileage</p>
+<p>Min. : 3800 Min. : 4867</p>
+<p>1st Qu.:10995 1st Qu.: 27200</p>
+<p>Median :13592 Median : 36385</p>
+<p>Mean :12962 Mean : 44261</p>
+<p>3rd Qu.:14904 3rd Qu.: 55125</p>
+<p>Max. :21992 Max. :151479</p>
+</section>
+<section id="medición-de-la-tendencia-central-media-y-mediana" class="level3">
+<h3 class="anchored" data-anchor-id="medición-de-la-tendencia-central-media-y-mediana">Medición de la tendencia central: media y mediana</h3>
+<p>En estadística, el promedio también se conoce como la media, una medida definida como la suma de todos los valores dividida por el número de valores. Por ejemplo, para calcular el ingreso medio en un grupo de tres personas con ingresos de $35 000, $45 000 y $55 000, podríamos escribir:</p>
+<p>&gt; (36000 + 44000 + 56000) / 3</p>
+<p>[1] 45333.33</p>
+<p>R también proporciona una función mean(), que calcula la media de un vector de números:</p>
+<p>&gt; mean(c(36000, 44000, 56000))</p>
+<p>[1] 45333.33</p>
+<p>Although the mean is by far the most commonly cited statistic for measuring the center of a dataset, it is not always the most appropriate. Another commonly-used measure of central tendency is the median, which is the value that occurs halfway through an ordered list of values. As with the mean, R provides a median() function, which we can apply to our salary data as shown in the following example:</p>
+<p>&gt; median(c(36000, 44000, 56000))</p>
+<p>[1] 44000</p>
+<p>El summary de cinco números es un conjunto de cinco estadísticas que representan aproximadamente la dispersión de un conjunto de datos. Las cinco estadísticas se incluyen en la salida de la función summary(). Escritos en orden, son:</p>
+<p>1. Mínimo (Min.)</p>
+<p>2. Primer cuartil, o Q1 (1st Qu.)</p>
+<p>3. Mediana, o Q2 (Median)</p>
+<p>4. Tercer cuartil, o Q3 (3rd Qu.)</p>
+<p>5. Máximo (Max.)</p>
+<p>El lapso entre el valor mínimo y máximo se conoce como rango. En R, la función range() devuelve tanto el valor mínimo como el máximo. Al combinar range() con la función de diferencia, diff() te permite examinar el rango de datos con un solo comando:</p>
+<p>&gt; range(usedcard$price)</p>
+<p>[1] 3800 21992</p>
+<p>&gt; diff(range(usedcard$price))</p>
+<p>[1] 18192</p>
+<p>El 50 por ciento medio de los datos entre Q1 y Q3 es de particular interés porque en sí mismo es una medida simple de dispersión. La diferencia entre Q1 y Q3 se conoce como rango intercuartil (IQR) y se puede calcular con la función IQR():</p>
+<p>&gt; IQR(usedcard$price)</p>
+<p>[1] 3909.5</p>
+<p>La función quantile() proporciona una herramienta robusta para identificar cuantiles para un conjunto de valores. De forma predeterminada, la función quantile() devuelve el resumen de cinco números.</p>
+<p>La aplicación de la función a los datos de automóviles usados da como resultado las mismas estadísticas que antes:</p>
+<p>&gt; quantile(usedcars$price)</p>
+<p>0% 25% 50% 75% 100%</p>
+<p>3800.0 10995.0 13591.5 14904.5 21992.0</p>
+</section>
+<section id="visualización-de-variables-numéricas-diagramas-de-caja" class="level3">
+<h3 class="anchored" data-anchor-id="visualización-de-variables-numéricas-diagramas-de-caja">Visualización de variables numéricas: diagramas de caja</h3>
+<p>Para obtener un diagrama de caja para una variable, usaremos la función boxplot(). También especificaremos un par de parámetros adicionales, main e ylab, para agregar un título a la figura y etiquetar el eje y (el eje vertical), respectivamente. Los comandos para crear precio y kilometraje diagramas de caja son:</p>
+<p>&gt; boxplot(usedcars$price, main=“Boxplot of Used Car Prices”, ylab=“Price ($)”)</p>
+<p>&gt; boxplot(usedcars$mileage, main=“Boxplot of Used Car Mileage”, ylab=“Odometer (mi.)”)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="box.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</section>
+<section id="visualización-de-variables-numéricas-histogramas" class="level3">
+<h3 class="anchored" data-anchor-id="visualización-de-variables-numéricas-histogramas">Visualización de variables numéricas – histogramas</h3>
+<p>Podemos crear un histograma para el precio de un auto usado y los datos de kilometraje usando la función hist(). Como habíamos hecho con el diagrama de caja, especificaremos un título para la figura usando el parámetro principal y etiquetaremos el eje x con el parámetro xlab. Los comandos para crear los histogramas son:</p>
+<p>&gt; hist(usedcars$price, main = “Histogram of Used Car Prices”, xlab = “Price ($)”)</p>
+<p>&gt; hist(usedcars$mileage, main = “Histogram of Used Car Mileage”, xlab = “Odometer (mi.)”)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="histograma.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
-<p>You can add options to executable code like this</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+</section>
+<section id="medición-de-la-dispersión-varianza-y-desviación-estándar" class="level3">
+<h3 class="anchored" data-anchor-id="medición-de-la-dispersión-varianza-y-desviación-estándar">Medición de la dispersión: varianza y desviación estándar</h3>
+<p>Para obtener la varianza y la desviación estándar en R se pueden utilizar las funciones var() y sd(). Por ejemplo, al calcular la varianza y la desviación estándar de nuestras variables de precio y millaje, encontramos:</p>
+<p>&gt; var(usedcars$price)</p>
+<p>[1] 9749892</p>
+<p>&gt; sd(usedcars$price)</p>
+<p>[1] 3122.482</p>
+<p>&gt; var(usedcars$mileage)</p>
+<p>[1] 728033954</p>
+<p>&gt; sd(usedcars$mileage)</p>
+<p>[1] 26982.1</p>
+</section>
+<section id="explorando-variables-categóricas" class="level3">
+<h3 class="anchored" data-anchor-id="explorando-variables-categóricas">Explorando variables categóricas</h3>
+<p>A diferencia de los datos numéricos, los datos categóricos se examinan mediante tablas en lugar de estadísticas de resumen. Una tabla que presenta una única variable categórica se conoce como tabla unidireccional. La función table() se puede usar para generar tablas unidireccionales para nuestros datos de autos usados:</p>
+<p>&gt; table(usedcars$year)</p>
+<p>2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012</p>
+<p>3 1 1 1 3 2 6 11 14 42 49 16 1</p>
+<p>&gt; table(usedcars$model)</p>
+<p>SE SEL SES</p>
+<p>78 23 49</p>
+<p>&gt; table(usedcars$color)</p>
+<p>Black Blue Gold Gray Green Red Silver White Yellow</p>
+<p>35 17 1 16 5 25 32 16 3</p>
+<p>R también puede realizar el cálculo de las proporciones de la tabla directamente usando el comando prop.table() en una tabla producida por la función table():</p>
+<p>&gt; model_table &lt;- table(usedcars$model)</p>
+<p>&gt; prop.table(model_table)</p>
+<p>SE SEL SES</p>
+<p>0.5200000 0.1533333 0.3266667</p>
+<p>Los resultados de prop.table() se pueden combinar con otras funciones de R para transformar la salida. Supongamos que nos gustaría mostrar los resultados en porcentajes con un solo decimal. Podemos hacer esto multiplicando las proporciones por 100, luego usando la función round() mientras especificamos dígitos = 1, como se muestra en el siguiente ejemplo:</p>
+<p>&gt; color_table &lt;- table(usedcars$color)</p>
+<p>&gt; color_pct &lt;- prop.table(color_table) * 100</p>
+<p>&gt; round(color_pct, digits = 1)</p>
+<p>Black Blue Gold Gray Green Red Silver White Yellow</p>
+<p>23.3 11.3 0.7 10.7 3.3 16.7 21.3 10.7 2.0</p>
+</section>
+<section id="visualización-de-relaciones-diagramas-de-dispersión" class="level3">
+<h3 class="anchored" data-anchor-id="visualización-de-relaciones-diagramas-de-dispersión">Visualización de relaciones: diagramas de dispersión</h3>
+<p>El comando completo para crear un diagrama de dispersión es:</p>
+<p>&gt; plot(x = usedcars$mileage, y = usedcars$price,</p>
+<p>main = “Scatterplot of Price vs.&nbsp;Mileage”,</p>
+<p>xlab = “Used Car Odometer (mi.)”,</p>
+<p>ylab = “Used Car Price ($)”)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Dispercion.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</section>
+<section id="examen-de-las-relaciones-tabulaciones-cruzadas-de-dos-factores" class="level3">
+<h3 class="anchored" data-anchor-id="examen-de-las-relaciones-tabulaciones-cruzadas-de-dos-factores">Examen de las relaciones: tabulaciones cruzadas de dos factores</h3>
+<p>Hay varias funciones para producir tablas de doble entrada en R, incluida table(), que también usamos para tablas de una sola entrada. La función CrossTable() en el paquete gmodels creado por Gregory R. Warnes es quizás la más fácil de usar porque presenta los porcentajes de fila, columna y margen en una sola tabla, ahorrándonos la molestia de combinar estos datos nosotros mismos. Para instalar el paquete gmodels, escriba:</p>
+<p>&gt; install.packages(“gmodels”)</p>
+<p>Después de que se instale el paquete, simplemente escriba biblioteca (gmodels) para cargar el paquete. Deberá cargar el paquete durante cada sesión de R en la que planee usar la función CrossTable().</p>
+<p>Antes de continuar con nuestro análisis, simplifiquemos nuestro proyecto reduciendo el número de niveles en la variable de color. Esta variable tiene nueve niveles, pero en realidad no necesitamos tantos detalles. Lo que realmente nos interesa es si el color del coche es conservador o no. Con este fin, dividiremos los nueve colores en dos grupos: el primer grupo incluirá los colores conservadores Negro, Gris, Plateado y Blanco; el segundo grupo incluirá Azul, Oro, Verde, Rojo y Amarillo. Crearemos una variable indicadora binaria (a menudo llamada variable ficticia), indicando si el color del automóvil es o no</p>
+<p>conservador según nuestra definición. Su valor será 1 si es verdadero, 0 en caso contrario:</p>
+<p>&gt; usedcars$conservative &lt;- usedcars$color %in% c(“Black”, “Gray”, “Silver”, “White”)</p>
+<p>Al examinar la salida de table() para nuestra variable recién creada, vemos que alrededor de dos tercios de los automóviles tienen colores conservadores, mientras que un tercio no los tiene:</p>
+<p>&gt; table(usedcars$conservative)</p>
+<p>FALSE TRUE</p>
+<p>51 99</p>
+<p>Ahora, veamos una tabulación cruzada para ver cómo la proporción de autos de colores conservadores varía según el modelo. Dado que asumimos que el modelo de automóvil dicta la elección del color, trataremos a la conservadora como la variable dependiente (y). Por lo tanto, el comando CrossTable() es:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tabla.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+</section>
 </section>
 </section>
 
